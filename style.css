@@ -1,0 +1,32 @@
+/* Removes default browser spacing and prevents scrollbars */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color:#000319;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; /* Stops scrollbars from appearing when text hits edges */
+  position: relative;
+}
+
+.bouncing-text {
+  position: absolute;
+  font-family: 'Agrandir', sans-serif;
+  font-weight: 800;
+  font-size: 4rem;  /* Slightly adjusted so 5 items fit comfortably */
+  color: #ffffff;
+  user-select: none;
+  white-space: nowrap;
+  will-change: transform;
+}
+
+/* Adjust text size for smaller mobile screens */
+@media (max-width: 600px) {
+  .bouncing-text {
+    font-size: 2.5rem;
+  }
+}
